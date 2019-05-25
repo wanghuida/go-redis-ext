@@ -2,6 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/wanghuida/go-redis-ext.svg?branch=master)](https://travis-ci.org/wanghuida/go-redis-ext)
+[![codecov](https://codecov.io/gh/wanghuida/go-redis-ext/branch/master/graph/badge.svg)](https://codecov.io/gh/wanghuida/go-redis-ext)
 [![Go Report Card](https://goreportcard.com/badge/github.com/wanghuida/go-redis-ext)](https://goreportcard.com/report/github.com/wanghuida/go-redis-ext)
 
 ## 安装
