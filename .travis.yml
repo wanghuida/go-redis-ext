@@ -11,6 +11,8 @@ go:
   - 1.12.x
   - master
 
+script:
+  - go test -race -cover -covermode=atomic github.com/wanghuida/go-redis-ext/xredis/xhash
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
