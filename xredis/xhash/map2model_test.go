@@ -10,7 +10,7 @@ type Map2modelTestSuite struct {
 	suite.Suite
 }
 
-func (s *Map2modelTestSuite) SetupTest() { }
+func (s *Map2modelTestSuite) SetupTest() {}
 
 // 测试 Bool 相关
 func (s *Map2modelTestSuite) TestBool() {
@@ -173,4 +173,3 @@ func (s *Map2modelTestSuite) TestTime() {
 func TestMap2modelSuite(t *testing.T) {
 	suite.Run(t, new(Map2modelTestSuite))
 }
-

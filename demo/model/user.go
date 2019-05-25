@@ -4,6 +4,7 @@ import "time"
 
 // 用户状态的自定义常量
 type UserStatus int
+
 const (
 	UserStatusValid   = 1
 	UserStatusInvalid = 2
