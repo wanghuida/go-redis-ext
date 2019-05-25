@@ -10,6 +10,7 @@ import (
 	"time"
 )
 
+// map 转模型，从 redis 取得 hash 后转为结构体使用
 func Map2model(origin map[string]string, target interface{}) error {
 
 	targetValue := reflect.ValueOf(target).Elem()
@@ -70,9 +71,8 @@ func setValue(targetValue reflect.Value, field reflect.StructField, originVal st
 	case reflect.Struct, reflect.Map:
 		if field.Type.String() == "time.Time" {
 			return setTimeValue(fieldValue, originVal)
-		} else {
-			return setStructValue(fieldValue, originVal)
 		}
+		return setStructValue(fieldValue, originVal)
 	// 处理 interface 类型
 	case reflect.Interface:
 		fieldValue.Set(reflect.ValueOf(originVal))
@@ -189,9 +189,8 @@ func setPtrValue(targetValue reflect.Value, field reflect.StructField, originVal
 	default:
 		if fieldValue.Type().Elem().String() == "time.Time" {
 			return setPtrTimeValue(fieldValue, originVal)
-		} else {
-			return setPtrStructValue(fieldValue, originVal)
 		}
+		return setPtrStructValue(fieldValue, originVal)
 	}
 }
 

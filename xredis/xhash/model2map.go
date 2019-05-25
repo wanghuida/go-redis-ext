@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// 模型转 Map，存储为 redis 的 hash 格式时使用
 func Model2map(origin interface{}) (map[string]interface{}, error) {
 
 	originValue := reflect.ValueOf(origin).Elem()
@@ -67,9 +68,8 @@ func getValue(originValue reflect.Value, field reflect.StructField) (interface{}
 	case reflect.Struct, reflect.Map:
 		if field.Type.String() == "time.Time" {
 			return getTimeValue(fieldValue)
-		} else {
-			return getJsonValue(fieldValue)
 		}
+		return getJsonValue(fieldValue)
 	// 处理 interface 类型
 	case reflect.Interface:
 		return fieldValue.Interface(), nil
@@ -117,9 +117,8 @@ func getPtrValue(originValue reflect.Value, field reflect.StructField) (interfac
 	default:
 		if fieldValue.Type().Elem().String() == "time.Time" {
 			return getPtrTimeValue(fieldValue)
-		} else {
-			return getPtrJsonValue(fieldValue)
 		}
+		return getPtrJsonValue(fieldValue)
 	}
 }
 
