@@ -6,11 +6,12 @@ import "time"
 type UserStatus int
 
 const (
-	// 有效的
+	// 用户状态
+	// UserStatusValid: 有效的
+	// UserStatusInvalid: 无效的
+	// UserStatusCheat: 作弊的
 	UserStatusValid   = 1
-	// 无效的
 	UserStatusInvalid = 2
-	// 作弊的
 	UserStatusCheat   = 3
 )
 
