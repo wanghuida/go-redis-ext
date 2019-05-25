@@ -1,5 +1,8 @@
 # 提高 go-redis 的 hash 易用性，提供 map 与 model 互相转换
 
+
+[![Build Status](https://travis-ci.org/wanghuida/go-redis-ext.svg?branch=master)](https://travis-ci.org/wanghuida/go-redis-ext)
+
 ## 安装
 
 ```shell
