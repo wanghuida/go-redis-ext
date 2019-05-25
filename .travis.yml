@@ -3,7 +3,6 @@ language:
 
 sudo: false
 
-
 go:
   - 1.9.x
   - 1.10.x
@@ -12,7 +11,7 @@ go:
   - master
 
 script:
-  - go test -race -cover -covermode=atomic github.com/wanghuida/go-redis-ext/xredis/xhash
+  - go test -v -coverprofile=coverage.txt -covermode=atomic ./xredis/xhash
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
