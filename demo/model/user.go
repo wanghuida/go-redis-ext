@@ -6,10 +6,12 @@ import "time"
 type UserStatus int
 
 const (
-	// 用户状态的常量
-	UserStatusValid   = 1 // UserStatusValid:   有效的
-	UserStatusInvalid = 2 // UserStatusInvalid: 无效的
-	UserStatusCheat   = 3 // UserStatusCheat:   作弊的
+	// UserStatusValid 有效的
+	UserStatusValid = 1
+	// UserStatusInvalid 无效的
+	UserStatusInvalid = 2
+	// UserStatusCheat 作弊的
+	UserStatusCheat = 3
 )
 
 // UserInfo 用户其他信息
