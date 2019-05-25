@@ -8,7 +8,10 @@ import (
 )
 
 const (
+	// XHashTag tag 的名称
 	XHashTag    = "redis"
+
+	// XHashTagSep tag 的分隔符
 	XHashTagSep = ";"
 )
 
@@ -17,7 +20,7 @@ type FieldTag struct {
 	IsIgnore bool   // 是否忽略该字段，不存储
 }
 
-// 分析字段的 TAG
+// ParseTag 分析字段的 tag
 func ParseTag(field reflect.StructField) *FieldTag {
 	fieldTag := &FieldTag{
 		Name:     Hump2underline(field.Name),
@@ -43,7 +46,7 @@ func ParseTag(field reflect.StructField) *FieldTag {
 	return fieldTag
 }
 
-// 驼峰 -> 下划线
+// Hump2underline 将驼峰转为下划线
 func Hump2underline(name string) string {
 	buffer := bytes.NewBufferString("")
 	for i, r := range name {
