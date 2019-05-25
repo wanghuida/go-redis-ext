@@ -9,7 +9,7 @@ import (
 
 const (
 	// XHashTag tag 的名称
-	XHashTag    = "redis"
+	XHashTag = "redis"
 
 	// XHashTagSep tag 的分隔符
 	XHashTagSep = ";"
