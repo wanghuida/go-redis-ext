@@ -15,6 +15,7 @@ const (
 	XHashTagSep = ";"
 )
 
+// 分析后的 tag 数据结构
 type FieldTag struct {
 	Name     string // 字段存储的名称
 	IsIgnore bool   // 是否忽略该字段，不存储
