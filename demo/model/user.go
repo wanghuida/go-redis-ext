@@ -2,22 +2,25 @@ package model
 
 import "time"
 
-// 用户状态的自定义常量
+// UserStatus 用户状态的自定义常量
 type UserStatus int
 
 const (
+	// 有效的
 	UserStatusValid   = 1
+	// 无效的
 	UserStatusInvalid = 2
+	// 作弊的
 	UserStatusCheat   = 3
 )
 
-// 用户其他信息
+// UserInfo 用户其他信息
 type UserInfo struct {
 	Id       int64
 	Nickname string
 }
 
-// 用户基本信息
+// User 用户基本信息
 type User struct {
 	Id          int64
 	RedPacketId *int64
