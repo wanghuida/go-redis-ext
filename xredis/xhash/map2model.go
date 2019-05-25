@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-// map 转模型，从 redis 取得 hash 后转为结构体使用
+// Map2model map 转模型，取得 hash 数据时用
 func Map2model(origin map[string]string, target interface{}) error {
 
 	targetValue := reflect.ValueOf(target).Elem()

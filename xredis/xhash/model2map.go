@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// 模型转 Map，存储为 redis 的 hash 格式时使用
+// Model2map 模型转 map，存储 hash 数据时用
 func Model2map(origin interface{}) (map[string]interface{}, error) {
 
 	originValue := reflect.ValueOf(origin).Elem()
