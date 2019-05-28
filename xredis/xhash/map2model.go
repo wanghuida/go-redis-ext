@@ -31,7 +31,7 @@ func Map2model(origin map[string]string, target interface{}) error {
 		}
 		err := setValue(targetValue, field, originVal)
 		if err != nil {
-			fmt.Println(err)
+			return err
 		}
 	}
 
